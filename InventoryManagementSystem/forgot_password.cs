@@ -49,15 +49,17 @@ namespace InventoryManagementSystem
                 timer1.Stop();
                 MailMessage mail = new MailMessage();
                 mail.To.Add(mailText.Text);
-                mail.From = new MailAddress("ibrahimyesilagac0@gmail.com");
+                mail.From = new MailAddress("your mail address");
                 mail.Subject = "Verification Code: ";
                 mail.Body = "Verification code is " + vcode;
                 SmtpClient stmp = new SmtpClient("smtp.gmail.com");
                 stmp.Port = 587;
                 stmp.EnableSsl = true;
                 stmp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                stmp.Credentials = new NetworkCredential("ibrahimyesilagac0@gmail.com", "jtxg fedp iclh isqc");
+                stmp.Credentials = new NetworkCredential("your mail adress ", "get app code for your google account and write here");
+                 
 
+                 
                 stmp.Send(mail);
 
 
